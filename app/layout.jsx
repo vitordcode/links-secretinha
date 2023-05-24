@@ -1,7 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { ApolloWrapper } from './lib/apollo-provider'
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Secretinha Sexshop',
@@ -10,8 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" className='bg-black'>
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br" className="bg-black">
+      <body className={montserrat.className}>
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </body>
     </html>
   )
 }
