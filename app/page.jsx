@@ -9,7 +9,7 @@ import Logo from '../public/images/s.png'
 export default function Home() {
   return (
     <div className="w-full bg-logo h-screen bg-cover">
-      <div className="w-full h-screen bg-black/60 flex flex-col">
+      <div className="w-full h-screen bg-black/30 flex flex-col">
         <header className="flex flex-col items-center pt-16">
           <Image
             src={Logo}
