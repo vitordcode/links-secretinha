@@ -82,7 +82,7 @@ export default function Home() {
             </ul>
 
             <span className="text-white text-sm">
-              Desenvolvido por
+              © Desenvolvido por
               <Link
                 className="font-bold"
                 href="https://linkedin.com/in/vitordcode"
