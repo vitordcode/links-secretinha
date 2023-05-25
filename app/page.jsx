@@ -1,9 +1,7 @@
 'use client'
 import Link from 'next/link'
 
-import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr'
 import { gql, useQuery } from '@apollo/client'
-
 
 import { Profile } from './components/Profile'
 import { Linktree } from './components/Link'
@@ -35,7 +33,7 @@ export default function Home() {
   
 
   if (loading) {
-    return <Loading />;
+    return <Loading />
   }
 
   if (error) {
