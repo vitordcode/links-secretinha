@@ -44,8 +44,8 @@ export default function Home() {
 
   return (
     <div className="w-full bg-logo max-h-screen bg-cover overflow-hidden">
-      <div className="w-full h-screen bg-black/20 flex flex-col">
-        <header className="w-full mb-16">
+      <div className="w-full h-screen bg-black/20 flex flex-col relative justify-center">
+        <header className="w-full mb-16 fixed top-8">
           {data.profiles.map((item, index) => {
             return (
               <Profile
@@ -69,7 +69,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <footer className="w-full">
+        <footer className="w-full fixed bottom-0">
           <div className="max-w-2xl mx-auto p-8 text-center">
             <ul className="flex items-center mx-auto justify-center gap-x-4 mb-4">
               {data.socialMedias.map((item, index) => {
