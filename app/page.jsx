@@ -1,14 +1,15 @@
 'use client'
+import Link from 'next/link'
 
 import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr'
+import { gql, useQuery } from '@apollo/client'
 
-import { gql } from '@apollo/client'
-
-import Link from 'next/link'
 
 import { Profile } from './components/Profile'
 import { Linktree } from './components/Link'
 import { Social } from './components/Social'
+import { Loading } from './components/Loading'
+
 
 const query = gql`
   query MyQuery {
@@ -30,10 +31,19 @@ const query = gql`
 `
 
 export default function Home() {
-  const { data } = useSuspenseQuery(query)
+  const { data, loading, error } =  useQuery(query)
+  
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <p>Ocorreu um erro ao carregar os dados.</p>;
+  }
 
   return (
-    <div className="w-full bg-logo h-screen bg-cover">
+    <div className="w-full bg-logo max-h-screen bg-cover">
       <div className="w-full h-screen bg-black/20 flex flex-col">
         <header className="w-full">
           {data.profiles.map((item, index) => {
