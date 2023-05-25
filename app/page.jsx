@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="w-full bg-logo max-h-screen bg-cover">
       <div className="w-full h-screen bg-black/20 flex flex-col">
-        <header className="w-full">
+        <header className="w-full mb-16">
           {data.profiles.map((item, index) => {
             return (
               <Profile
@@ -58,7 +58,7 @@ export default function Home() {
         </header>
 
         <div className="flex-1 overflow-y-scroll">
-          <ul className="w-full flex-1 max-w-2xl mx-auto px-8 flex flex-col mt-20 gap-y-5 text-center">
+          <ul className="w-full flex-1 max-w-2xl mx-auto px-8 flex flex-col  gap-y-5 text-center">
             {data.links.map((item, index) => {
               return (
                 <li key={index} className="w-full bg-gray-100 rounded-md">
