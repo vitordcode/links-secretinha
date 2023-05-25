@@ -55,11 +55,11 @@ export default function Home() {
           })}
         </header>
 
-        <div className=" overflow-y-scroll">
+        <div className="section overflow-y-scroll">
           <ul className="w-full flex-1 max-w-2xl mx-auto px-8 flex flex-col  gap-y-5 text-center">
             {data.links.map((item, index) => {
               return (
-                <li key={index} className="w-full bg-gray-100 rounded-md">
+                <li key={index} className="w-full bg-gray-100 rounded-md hover:bg-white/75 duration-200">
                   <Linktree url={item.url} linkName={item.linkName} />
                 </li>
               )
