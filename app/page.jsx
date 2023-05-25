@@ -4,13 +4,8 @@ import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr"
 
 import { gql } from "@apollo/client";
 
-import Image from 'next/image'
 import Link from 'next/link'
 
-import { AiOutlineInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
-import { FaTelegramPlane } from 'react-icons/fa'
-
-import Logo from '../public/images/s.png'
 import { Profile } from "./components/Profile";
 import { Linktree } from "./components/Link";
 import { Social } from "./components/Social";
@@ -53,7 +48,7 @@ export default function Home() {
           })}
         </header>
 
-        <ul className="w-full flex-1 max-w-2xl mx-auto px-8 flex flex-col mt-20 gap-y-5 text-center">
+        <div className="">
           {data.links.map((item, index) => {
             return (
               <Linktree
@@ -63,7 +58,7 @@ export default function Home() {
               />
             )
           })}
-        </ul>
+        </div>
 
         <footer className='w-full'>
           <div className='max-w-2xl mx-auto p-8 text-center'>

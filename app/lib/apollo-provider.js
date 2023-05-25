@@ -15,6 +15,14 @@ import {
 function makeClient() {
   const httpLink = new HttpLink({
     uri: process.env.NEXT_PUBLIC_HYGRAPH_URL,
+    defaultOptions: {
+      watchQuery: {
+        fetchPolicy: 'cache-and-network',
+        errorPolicy: 'all',
+        nextFetchPolicy: 'cache-first',
+        pollInterval: 100000, // 300 segundos = 5 minutos
+      },
+    },
   })
 
   return new ApolloClient({
