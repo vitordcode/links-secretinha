@@ -7,3 +7,7 @@ svg {
   width: 28px;
   height: 28px;
 }
+
+.content {
+  max-height: calc(100vh - 200px); /* 200px = altura do cabeçalho + altura do rodapé */
+}

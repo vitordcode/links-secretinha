@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export const Profile = (props) => {
   return (
     <div className='w-full flex flex-col items-center pt-16'>

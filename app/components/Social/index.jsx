@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { CMSIcon } from '../cms-icon'
 
 export const Social = (props) => {
