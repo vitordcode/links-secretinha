@@ -57,7 +57,7 @@ export default function Home() {
           })}
         </header>
 
-        <div className="flex-1 overflow-y-scroll">
+        <div className=" overflow-y-scroll">
           <ul className="w-full flex-1 max-w-2xl mx-auto px-8 flex flex-col  gap-y-5 text-center">
             {data.links.map((item, index) => {
               return (
