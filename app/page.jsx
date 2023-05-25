@@ -43,7 +43,7 @@ export default function Home() {
   }
 
   return (
-    <div className="w-full bg-logo max-h-screen bg-cover">
+    <div className="w-full bg-logo max-h-screen bg-cover overflow-hidden">
       <div className="w-full h-screen bg-black/20 flex flex-col">
         <header className="w-full mb-16">
           {data.profiles.map((item, index) => {
