@@ -1,6 +1,6 @@
 export const Profile = (props) => {
   return (
-    <div className='w-full flex flex-col items-center pt-16'>
+    <div className='w-full flex flex-col items-center'>
       <img
         src={props.profileImage}
         className="w-20 h-20 rounded-full"
